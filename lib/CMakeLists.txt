@@ -41,7 +41,7 @@ list(APPEND MyModules3_sources
 )
 
 add_library(gnuradio-MyModules3 SHARED ${MyModules3_sources})
-target_link_libraries(gnuradio-MyModules3 ${Boost_LIBRARIES} ${GRUEL_LIBRARIES} ${GNURADIO_CORE_LIBRARIES})
+target_link_libraries(gnuradio-MyModules3 ${Boost_LIBRARIES} ${GRUEL_LIBRARIES} ${GNURADIO_CORE_LIBRARIES} ${UHD_LIBRARIES})
 set_target_properties(gnuradio-MyModules3 PROPERTIES DEFINE_SYMBOL "gnuradio_MyModules3_EXPORTS")
 
 ########################################################################

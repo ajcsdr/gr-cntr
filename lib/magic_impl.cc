@@ -64,10 +64,9 @@ namespace gr {
 		      gr_make_io_signature(1, 1, sizeof (float)),
 		      gr_make_io_signature(1, 1, sizeof (float)))
     {
-std::string device_addr;
-boost::shared_ptr<uhd_usrp_source> usrp_source = uhd_make_usrp_source(
-device_addr, uhd::stream_args_t("fc32")
-);
+		std::string args;
+		uhd::usrp::multi_usrp::sptr usrp = uhd::usrp::multi_usrp::make(args);
+
 
 		//device = uhd::usrp::multi_usrp::make();//uhd::device_addr_t "");
 		}

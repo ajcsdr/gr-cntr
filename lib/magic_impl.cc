@@ -66,7 +66,8 @@ namespace gr {
     {
 		std::string args;
 		uhd::usrp::multi_usrp::sptr usrp = uhd::usrp::multi_usrp::make(args);
-
+		
+		std::cout <<std::endl <<	"TEST NUMBER!!!" << usrp -> get_rx_rate() << std::endl;
 
 		//device = uhd::usrp::multi_usrp::make();//uhd::device_addr_t "");
 		}
